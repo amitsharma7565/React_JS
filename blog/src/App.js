@@ -439,5 +439,13 @@ import Students from './Students';
 //   )
 // }
 
+function App(){
+  return(
+    <div className='App'>
+      <h1 className='primary'>Style type 1 in React js</h1>
+      <h1 style={{color:'red', backgroundColor:'black'}}>Style type 1 in React js</h1>
+    </div>
+  )
+}
 
 export default App;
