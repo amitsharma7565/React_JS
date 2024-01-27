@@ -2,17 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import User from './FunctionComponen';
 import ClassComponent from './ClassComponent';
-import {useState} from 'react';
-import React,{Component,useEffect} from 'react';
+import { useState } from 'react';
+import React, { Component, useEffect } from 'react';
 import Student from './Student';
 import Teacher from './Teacher';
 import Profile from './Profile';
 import Login from './Login';
 import Members from './Members';
 import Students from './Students';
-
-
-
+import Sample from './Sample';
+import { Button, Alert } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 
 
 // function App() {
@@ -65,7 +65,7 @@ import Students from './Students';
 //       );
 // }
 
-   
+
 //   }
 
 
@@ -105,12 +105,12 @@ import Students from './Students';
 //         <Teacher name ={this.state.name}email="amitsharma@gnail.com"/>
 //         <button onClick={()=>this.setState({name:"Amit sharma"})}>Update name</button>
 //         <Teacher name ="Varsha" email="varsha@bl.com"/>
-  
+
 //       </div>
 //     );
 //   }
 
- 
+
 // }
 
 
@@ -217,7 +217,7 @@ import Students from './Students';
 //         <Members data={getdata} />
 //       </div>
 //     </div>
-    
+
 //   );
 // }
 
@@ -327,7 +327,7 @@ import Students from './Students';
 //   if(this.state.count>5){
 //     return true
 //   }
- 
+
 // }
 
 //   render(){
@@ -439,13 +439,181 @@ import Students from './Students';
 //   )
 // }
 
+
+// function App(){
+//   return(
+//     <div className='App'> 
+//       <h1>Install bootstrap</h1>
+//       {/* <button onClick={()=>alert("hello")}>Click Me</button> */}
+//       <Alert variant="warning">
+//           This is a variant alert—check it out!
+//         </Alert>
+//     </div>
+//   )
+// }
+
+
+
+//function App() {
+// const students = ['Amit', 'sharma', 'negi', 'rawat']
+//map looping
+// students.map((i)=>{
+//   console.log("My name is ",i)
+// })
+// for loop 
+// for(let i=0;i<students.length;i++){
+//   console.log("in for loop my name is "+ students[i])
+// }
+// const students =[
+//   {name:"Amit", email:"amit43543@gmail.com", phoneNo: "324324"},
+//   {name:"sidhu", email:"sidhu@gmail.com", phoneNo: "111"},
+//   {name:"sam", email:"sam@gmail.com", phoneNo: "43543"},
+//   {name:"abhishek", email:"abhishek@gmail.com", phoneNo: "0000S"}
+// ]
+
+
+//   return (
+//     <div className="App">
+//       <h1>Handle Array with list</h1>
+//       <table border="1">
+//       <tr>
+//           <td>Name</td>
+//           <td>Email Adresss</td>
+//           <td>Contact</td>
+//          </tr> 
+//       {
+//         students.map((data) =>
+//          <tr>
+//           <td>{data.name}</td>
+//           <td>{data.email}</td>
+//           <td>{data.phoneNo}</td>
+//          </tr> 
+
+
+//         )
+//       }
+// </table>
+//     </div>
+//   )
+// }
+
+// 
+// function App() {
+//   const users = [
+//     {
+//       name: "Amit", email: "amit43543@gmail.com", phoneNo: "324324", address: [
+//         { hm: "10", city: "noida", country: "india" },
+//         { hm: "34", city: "gurgoan", country: "india" },
+//         { hm: "43", city: "delhi", country: "india" },
+//         { hm: "54", city: "g.noida", country: "india" }
+//       ]
+//     },
+//     {
+//       name: "sidhu", email: "sidhu@gmail.com", phoneNo: "111", address: [
+//         { hm: "10", city: "noida", country: "india" },
+//         { hm: "34", city: "gurgoan", country: "india" },
+//         { hm: "43", city: "delhi", country: "india" },
+//         { hm: "54", city: "g.noida", country: "india" }
+//       ]
+//     },
+//     {
+//       name: "sam", email: "sam@gmail.com", phoneNo: "43543", address: [
+//         { hm: "10", city: "noida", country: "india" },
+//         { hm: "34", city: "gurgoan", country: "india" },
+//         { hm: "43", city: "delhi", country: "india" },
+//         { hm: "54", city: "g.noida", country: "india" }
+//       ]
+//     },
+//     {
+//       name: "abhishek", email: "abhishek@gmail.com", phoneNo: "00000", address: [
+//         { hm: "10", city: "noida", country: "india" },
+//         { hm: "34", city: "gurgoan", country: "india" },
+//         { hm: "43", city: "delhi", country: "india" },
+//         { hm: "54", city: "g.noida", country: "india" }
+//       ]
+//     }
+//   ]
+
+
+//   return (
+//     <div className='App'>
+//       <h1>List with nested Array</h1>
+//       <table>
+//         <tbody>
+//           <tr>
+//             <td>address</td>
+//             <td>S.no</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>phoneNo</td>
+
+//           </tr>
+//         </tbody>
+//         {
+
+
+
+
+
+//           users.map((item, i) =>
+//             <tr key={i}>
+
+//               <td>
+//                 <table>
+//                   <tbody>
+//                     {item.address.map((data) =>
+//                       <tr>
+//                         <td>{data.hm}</td>
+//                         <td>{data.city}</td>
+//                         <td>{data.country}</td>
+//                       </tr>
+//                     )
+//                     }
+//                   </tbody>
+//                 </table>
+//               </td>
+
+
+//               <td>{i + 1}</td>
+//               <td>{item.name}</td>
+//               <td>{item.email}</td>
+//               <td>{item.phoneNo}</td>
+
+
+//             </tr>
+//           )
+//         }
+//       </table>
+//     </div>
+//   )
+// }
+
 function App(){
+  const users = [
+    {
+     name: "Amit", email: "amit43543@gmail.com", phoneNo: "324324"
+    },
+    {
+             name: "sam", email: "sam@gmail.com", phoneNo: "43543"
+    },
+    {
+             name: "abhishek", email: "abhishek@gmail.com", phoneNo: "00000"
+    }
+  ]
   return(
-    <div className='App'>
-      <h1 className='primary'>Style type 1 in React js</h1>
-      <h1 style={{color:'red', backgroundColor:'black'}}>Style type 1 in React js</h1>
+  
+    <div>
+      <h1>Reuse component with List</h1>
+
+      {
+        users.map((item, k)=>
+       
+        <h1 key={k}> <Sample data={item} /></h1>
+        )
+      }
     </div>
   )
 }
+
 
 export default App;

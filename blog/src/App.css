@@ -13,6 +13,14 @@
   }
 }
 
+span{
+  padding: auto;
+  background-color: black;
+  text-align: center;
+  color: red;
+  line-height: 50px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
